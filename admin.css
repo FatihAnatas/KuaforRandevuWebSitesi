@@ -1,0 +1,209 @@
+
+:root {
+    --primary-bg: #111;       
+    --card-bg: #1a1a1a;       
+    --gold: #d4af37;          
+    --text-light: #f4f4f4;
+    --error: #ff5252;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+}
+
+.admin-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.logo-text {
+    text-align: center;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.admin-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    margin-bottom: 30px;
+}
+
+#adminDatePicker {
+    padding: 10px;
+    background: #222;
+    border: 1px solid var(--gold);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.add-appointment-box {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto; 
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.input-group input, .input-group select {
+    padding: 12px;
+    background: #222;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: var(--gold);
+}
+
+.add-btn {
+    background: var(--gold);
+    color: #000;
+    border: none;
+    padding: 0 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+
+.stats-card {
+    background: linear-gradient(45deg, #1a1a1a, #222);
+    padding: 15px 25px;
+    border-radius: 10px;
+    border-left: 5px solid var(--gold);
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: var(--gold);
+}
+
+.table-container {
+    background: var(--card-bg);
+    border-radius: 10px;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #222;
+    color: var(--gold);
+    text-align: left;
+    padding: 15px;
+    border-bottom: 2px solid #333;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #222;
+    font-size: 15px;
+}
+
+tr:hover {
+    background: #222;
+}
+
+
+.delete-btn {
+    background: #333;
+    color: var(--error);
+    border: 1px solid var(--error);
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: var(--error);
+    color: #fff;
+}
+
+.delete-btn-small {
+    background: transparent;
+    color: var(--error);
+    border: 1px solid var(--error);
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.delete-btn-small:hover {
+    background: var(--error);
+    color: #fff;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid var(--gold);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+
+@media (max-width: 768px) {
+    .input-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .admin-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    th:nth-child(3), td:nth-child(3) {
+        display: none; 
+    }
+}

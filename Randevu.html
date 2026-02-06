@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randevu - Karizma Erkek Kuaförü</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">KARİZMA ERKEK KUAFÖRÜ</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="FiyatListesi.html">Fiyat Listesi</a></li>
+                <li><a href="Hakkında.html">Hakkımızda</a></li>
+                <li><a href="Randevu.html" style="color:var(--gold)">Randevu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="center-wrap">
+            <h2 class="section-title">Online Randevu Al</h2>
+            <p style="color: #d4af37; font-size: 20px;">Müsait saatleri görerek hemen yerinizi ayırtın.</p>
+        </div>
+        
+        <div style="margin-top: 30px; border: 5px solid #d4af37; padding: 20px; border-radius: 10px; background: #1a1a1a; min-height: 400px; display: flex; align-items: center; justify-content: flex-start; flex-direction: column;">
+            
+            <div class="tab-container">
+                <button id="tab-book" class="tab-btn" onclick="switchTab('book')">Randevu Al</button>
+                <button id="tab-cancel" class="tab-btn" onclick="switchTab('cancel')">İptal / Sorgula</button>
+            </div>
+
+            <div id="welcome-text" style="text-align:center; padding: 40px; font-size: 18px;">
+                <h3 style="color:#d4af37; margin-bottom:10px;font-size: 40px;">Hoş Geldiniz</h3>
+                <p style="color: #d4af37; font-size: 25px;">İşlem yapmak için lütfen yukarıdan bir menü seçiniz.</p>
+            </div>
+
+            <div id="view-book" style="display: none; width: 100%; max-width: 500px;">
+                <label for="datePicker" style="color:#d4af37; font-weight:bold; display:block; margin-bottom:5px; text-align:center;">Tarih Seçiniz:</label>
+                <input type="date" id="datePicker">
+
+                <div id="slotsArea" class="slots-container">
+                    </div>
+
+                <div id="formArea" style="display:none; margin-top: 20px;">
+                    <h4 style="margin-top:0; color:#d4af37; text-align:center; border-bottom:1px solid #888; padding-bottom:10px;">
+                        Seçilen Saat: <span id="selectedTimeDisplay" style="color:#fff"></span>
+                    </h4>
+                    
+                    <label>Adınız Soyadınız:</label>
+                    <input type="text" id="nameInput" placeholder="Örn: Ahmet Yılmaz">
+                    
+                    <label>Telefon Numaranız:</label>
+                    <input type="tel" id="phoneInput" value="0" placeholder="0 555..." maxlength="17">
+
+                    <button id="bookBtn">Randevuyu Onayla</button>
+                </div>
+            </div>
+
+            <div id="view-cancel" style="display: none; width: 100%; max-width: 500px;">
+                <div class="cancel-box" style="text-align: center;">
+                    <h3 style="color:#d4af37; margin-top:0;">Randevumu Bul</h3>
+                    <p style="color:#888; font-size:14px; margin-bottom:20px;">
+                        Randevunuzu iptal etmek için numaranızı giriniz.
+                    </p>
+                    
+                    <label style="color:#d4af37; font-weight:bold;">Telefon Numaranız:</label>
+                    <input type="tel" id="searchPhoneInput" value="0" placeholder="0 555..." maxlength="17">
+                    
+                    <button id="searchBtn" class="gold-btn" style="width: 100%; margin-top: 10px;">Sorgula</button>
+
+                    <div id="resultArea" style="margin-top:20px;"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="center-wrap">
+            <h2 class="section-title">veya Bize Ulaşın</h2>
+            <p>Telefonla arayarak veya mesaj atarak da randevu oluşturabilirsiniz.</p>
+        </div>
+        <br>
+        <div class="contact-box">
+            <div class="info-item">
+                <i class="fas fa-phone-alt" style="color:var(--gold); font-size: 1.5rem;"></i>
+                <h3 style="margin-top:10px;">Telefon</h3>
+                <p>0555 408 1939</p>
+                <a href="tel:05554081939" class="iletisim-btn">HEMEN ARA</a>
+            </div>
+            
+            <hr style="border-color:#444; margin: 30px 0; width: 100%;">
+
+            <div class="info-item">
+                <i class="fas fa-envelope" style="color:var(--gold); font-size: 1.5rem;"></i>
+                <h3 style="margin-top:10px;">E-Posta</h3>
+                <p>karizmabymurat@gmail.com</p>
+                <a href="mailto:karizmabymurat@gmail.com?subject=Randevu Talebi" class="iletisim-btn">MAİL GÖNDER</a>
+            </div>
+
+            <hr style="border-color:#444; margin: 30px 0; width: 100%;">
+
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt" style="color:var(--gold); font-size: 1.5rem;"></i>
+                <h3 style="margin-top:10px;">Adresimiz</h3>
+                <p style="margin-top:10px;">
+                    Park Apt, İdealtepe Mah Küçük Tur Yolu,<br>
+                    İdealtepe, Bağdat Cad. No 202,<br>
+                    34841 Maltepe/İstanbul
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Karizma Erkek Kuaförü.</p>
+    </footer>
+
+    <div id="successModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div style="font-size: 50px; margin-bottom: 10px;">✅</div>
+            <h2 style="color: #d4af37; margin: 0 0 10px 0;">Randevu Alındı!</h2>
+            <p id="modalMessage" style="color: #ccc; margin-bottom: 20px;">İşleminiz başarıyla gerçekleşti.</p>
+            <button id="tamamBtn" onclick="closeModal()">Tamam</button>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script>
+        
+        function closeModal() {
+            document.getElementById('successModal').style.display = 'none';
+        }
+        
+        
+        window.switchTab = function(tabName) {
+            const viewBook = document.getElementById('view-book');
+            const viewCancel = document.getElementById('view-cancel');
+            const welcomeText = document.getElementById('welcome-text');
+            const btnBook = document.getElementById('tab-book');
+            const btnCancel = document.getElementById('tab-cancel');
+
+            welcomeText.style.display = 'none';
+
+            if (tabName === 'book') {
+                viewBook.style.display = 'block';
+                viewCancel.style.display = 'none';
+                btnBook.style.backgroundColor = '#d4af37';
+                btnBook.style.color = '#000';
+                btnCancel.style.backgroundColor = '#333';
+                btnCancel.style.color = '#fff';
+            } else {
+                viewBook.style.display = 'none';
+                viewCancel.style.display = 'block';
+                btnBook.style.backgroundColor = '#333';
+                btnBook.style.color = '#fff';
+                btnCancel.style.backgroundColor = '#d4af37';
+                btnCancel.style.color = '#000';
+            }
+        }
+    </script>
+
+    <script src="config.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
