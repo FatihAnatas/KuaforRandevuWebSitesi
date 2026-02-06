@@ -1,5 +1,5 @@
 # KuaforRandevuWebSitesi
-[![Live Demo](https://img.shields.io/badge/Canlı_Demo-Sitemi_Görüntüle-gold?style=for-the-badge&logo=google-chrome&logoColor=white)]((https://karizmaerkekkuaforu.netlify.app/))
+[![Live Demo](https://img.shields.io/badge/Canlı_Demo-Sitemi_Görüntüle-gold?style=for-the-badge&logo=google-chrome&logoColor=white)](https://karizmaerkekkuaforu.netlify.app/)
 Karizma Erkek Kuaförü için geliştirilmiş, kullanıcıların çevrim içi randevu oluşturabildiği bir web tabanlı randevu yönetim sistemidir. Proje, modern web teknolojileri kullanılarak geliştirilmiş olup randevu verilerinin saklanması ve yönetimi için Firebase Database altyapısı kullanılmıştır.
 
 Proje Özeti
